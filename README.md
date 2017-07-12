@@ -22,7 +22,7 @@ Or install it yourself as:
 
 1. To get the day, run this command: 
 
-  WeekToDate::GetDate.new(year, week_number, day_number)
+  WeekToDate::GetDate.date_from_num(year, week_number, day_number)
 
   - For the week_number, enter the week in the year.
   - For day_number enter the position the day holds in the following array
@@ -35,6 +35,9 @@ Or install it yourself as:
 2. To get the week and day number within the week (according to the array above), run this command:
   
   WeekToDate::GetWeek.week(date)
+
+  - Enter the date in the format "year-month-day"
+  - Make sure date is formated as a string
 
 ## Development
 
