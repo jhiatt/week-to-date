@@ -18,12 +18,16 @@ module WeekToDate
     end
 
     def self.date_from_num(year, week_number, day)
-      date = Date.commercial(year, week_number, day)
+      if day == 7
+        week_number = week_number - 1
+        date = Date.commercial(year, week_number, day)
+      else
+        date = Date.commercial(year, week_number, day)
+      end
     end
   end
 
   class GetWeek
-
 
     def self.week(date)
       day = Date.parse(date).strftime("%A")

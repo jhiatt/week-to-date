@@ -39,6 +39,8 @@ Or install it yourself as:
   - Enter the date in the format "year-month-day"
   - Make sure date is formated as a string
 
+Note: This gem uses the Striftime concept of a week that starts on Sunday for outputs (though not for inputs at this time).
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
