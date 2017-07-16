@@ -30,9 +30,10 @@ module WeekToDate
   class GetWeek
 
     def self.week(date)
+      year = Date.parse(date).strftime("%Y")
       day = Date.parse(date).strftime("%A")
       week_num = Date.parse(date).strftime("%U").to_i
-      array = [week_num, day]
+      array = [year, week_num, day]
       return array
     end
   end

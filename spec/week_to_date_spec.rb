@@ -12,12 +12,12 @@ end
 
 RSpec.describe WeekToDate::GetWeek do
   it "converts a date to a day of the week" do
-    expect(WeekToDate::GetWeek.week("2017-07-12 00:41:29 -0400")).to eq([28, "Wednesday"])
+    expect(WeekToDate::GetWeek.week("2017-07-12 00:41:29 -0400")).to eq(["2017", 28, "Wednesday"])
   end
   it "edge cases match strf time" do
-    expect(WeekToDate::GetWeek.week("2017-07-15 00:41:29 -0400")).to eq([28, "Saturday"])
-    expect(WeekToDate::GetWeek.week("2017-07-16 00:41:29 -0400")).to eq([29, "Sunday"])
-    expect(WeekToDate::GetWeek.week("2017-07-17 00:41:29 -0400")).to eq([29, "Monday"])
+    expect(WeekToDate::GetWeek.week("2017-07-15 00:41:29 -0400")).to eq(["2017", 28, "Saturday"])
+    expect(WeekToDate::GetWeek.week("2017-07-16 00:41:29 -0400")).to eq(["2017", 29, "Sunday"])
+    expect(WeekToDate::GetWeek.week("2017-07-17 00:41:29 -0400")).to eq(["2017", 29, "Monday"])
   end
 end
 
