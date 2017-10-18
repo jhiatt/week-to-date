@@ -1,5 +1,4 @@
 require 'date'
-require 'pry'
 require "week_to_date/version"
 
 module WeekToDate
